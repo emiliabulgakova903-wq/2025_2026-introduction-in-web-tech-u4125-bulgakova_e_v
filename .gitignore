@@ -1,0 +1,12 @@
+# Системные файлы Windows
+Thumbs.db
+desktop.ini
+
+# Временные файлы редакторов
+*.swp
+*.log
+.vscode/
+.idea/
+
+# Скрытые файлы папок
+.DS_Store
