@@ -33,6 +33,9 @@ Date of finished: 10.03.2026
 
 4. Создан файл `index.html` с корректной кодировкой UTF-8 для отображения кириллицы.
 
+![ГИТ](./screenshots/git_1.png)
+![ГИТ](./screenshots/git_2.png)
+
 
 5\. \
 
