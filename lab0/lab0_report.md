@@ -58,13 +58,13 @@ Date of finished: 10.03.2026
 
 
 
-!\[Скриншот Git\_1](./screenshots/git_1.png)
+![Скриншот Git\_1](./screenshots/git_1.png)
 
-!\[Скриншот Github\_1](./screenshots/github_1.png)
+![Скриншот Github\_1](./screenshots/github_1.png)
 
-!\[Скриншот Github\_1](./screenshots/github_2.png)
+![Скриншот Github\_2](./screenshots/github_2.png)
 
-!\[Скриншот Github\_1](./screenshots/github_3.png)
+![Скриншот Github\_3](./screenshots/github_3.png)
 
 
 
