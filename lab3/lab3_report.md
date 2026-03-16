@@ -53,7 +53,11 @@ Date of finished: 17.03.2026
 * Была создана общая сеть monitoring, чтобы контейнеры могли общаться.
 * Были подключены «тома» (volumes), чтобы настройки и графики не удалились после выключения компьютера.
 
+
+
 !\[compose](screenshots/compose.png)
+
+
 
 !\[докер](screenshots/docker.png)
 
@@ -62,6 +66,8 @@ Date of finished: 17.03.2026
 
 
 В Grafana был подключен источник данных (Data Source) — Prometheus. Затем был импортирован профессиональный дашборд под номером 1860, который умеет расшифровывать данные от Node Exporter.
+
+
 
 !\[grafana](screenshots/grafana.png)
 
