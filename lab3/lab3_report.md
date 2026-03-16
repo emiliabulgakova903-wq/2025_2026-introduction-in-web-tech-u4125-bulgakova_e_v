@@ -55,11 +55,11 @@ Date of finished: 17.03.2026
 
 
 
-!\[compose](screenshots/compose.png)
+![compose](screenshots/compose.png)
 
 
 
-!\[докер](screenshots/docker.png)
+![докер](screenshots/docker.png)
 
 
 
@@ -69,7 +69,7 @@ Date of finished: 17.03.2026
 
 
 
-!\[grafana](screenshots/grafana.png)
+![grafana](screenshots/grafana.png)
 
 
 
