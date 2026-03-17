@@ -1,0 +1,51 @@
+/* 1. Базовые настройки и плавность */
+:root {
+  --md-text-font-size: 1.0rem; /* Крупный, читаемый шрифт */
+}
+
+body {
+  /* Фикс для фона: добавляем градиент-затемнение ПОВЕРХ картинки */
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), /* Светлый фильтр 85% */
+    url("../images/background.jpg");
+  
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* Настройка для Темной темы: меняем фильтр на темный */
+[data-md-color-scheme="slate"] body {
+  background-image: 
+    linear-gradient(rgba(30, 34, 42, 0.9), rgba(30, 34, 42, 0.9)), /* Темный фильтр 90% */
+    url("../images/background.jpg");
+}
+
+/* 2. Делаем блок контента чистым и аккуратным */
+.md-content {
+  background-color: transparent; /* Убираем подложку, т.к. фильтр уже на body */
+  padding: 20px;
+}
+
+/* 3. Заголовки */
+h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem !important;
+}
+
+/* 4. Анимация карточек на главной */
+.grid.cards > :is(ul, ol) > li,
+.grid.cards > li {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  background-color: rgba(255, 255, 255, 0.5); /* Карточки слегка просвечивают */
+}
+
+.grid.cards > :is(ul, ol) > li:hover,
+.grid.cards > li:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  border-color: var(--md-accent-fg-color) !important;
+}
