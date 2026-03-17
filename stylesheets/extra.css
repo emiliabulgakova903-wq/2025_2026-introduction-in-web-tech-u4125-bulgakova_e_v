@@ -1,0 +1,43 @@
+/* Создаем слой фона, который всегда снизу и не мешает кликам */
+body {
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+        url("../images/background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Настройка для Темной темы (чтобы глазам было приятно) */
+[data-md-color-scheme="slate"] body {
+    background-image: 
+        linear-gradient(rgba(30, 34, 42, 0.92), rgba(30, 34, 42, 0.92)), 
+        url("../images/background.jpg");
+}
+
+/* Делаем основные блоки прозрачными, чтобы фон «дышал» */
+.md-container, 
+.md-header, 
+.md-main, 
+.md-footer,
+.md-sidebar {
+    background-color: transparent !important;
+}
+
+/* Принудительно разрешаем клики по боковому меню (на всякий случай) */
+.md-sidebar--secondary {
+    pointer-events: auto !important;
+}
+
+/* Добавляем легкую тень и белизну основному тексту для контраста */
+.md-content__inner {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 25px !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+/* В темной теме подложка текста тоже темная */
+[data-md-color-scheme="slate"] .md-content__inner {
+    background-color: rgba(30, 34, 42, 0.6);
+}
