@@ -1,51 +1,43 @@
-/* 1. Базовые настройки и плавность */
-:root {
-  --md-text-font-size: 1.0rem; /* Крупный, читаемый шрифт */
-}
-
+/* Создаем слой фона, который всегда снизу и не мешает кликам */
 body {
-  /* Фикс для фона: добавляем градиент-затемнение ПОВЕРХ картинки */
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), /* Светлый фильтр 85% */
-    url("../images/background.jpg");
-  
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  transition: background-color 0.5s, color 0.5s;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+        url("../images/background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
-/* Настройка для Темной темы: меняем фильтр на темный */
+/* Настройка для Темной темы (чтобы глазам было приятно) */
 [data-md-color-scheme="slate"] body {
-  background-image: 
-    linear-gradient(rgba(30, 34, 42, 0.9), rgba(30, 34, 42, 0.9)), /* Темный фильтр 90% */
-    url("../images/background.jpg");
+    background-image: 
+        linear-gradient(rgba(30, 34, 42, 0.92), rgba(30, 34, 42, 0.92)), 
+        url("../images/background.jpg");
 }
 
-/* 2. Делаем блок контента чистым и аккуратным */
-.md-content {
-  background-color: transparent; /* Убираем подложку, т.к. фильтр уже на body */
-  padding: 20px;
+/* Делаем основные блоки прозрачными, чтобы фон «дышал» */
+.md-container, 
+.md-header, 
+.md-main, 
+.md-footer,
+.md-sidebar {
+    background-color: transparent !important;
 }
 
-/* 3. Заголовки */
-h1 {
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 1.5rem !important;
+/* Принудительно разрешаем клики по боковому меню (на всякий случай) */
+.md-sidebar--secondary {
+    pointer-events: auto !important;
 }
 
-/* 4. Анимация карточек на главной */
-.grid.cards > :is(ul, ol) > li,
-.grid.cards > li {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(0,0,0,0.08) !important;
-  background-color: rgba(255, 255, 255, 0.5); /* Карточки слегка просвечивают */
+/* Добавляем легкую тень и белизну основному тексту для контраста */
+.md-content__inner {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 25px !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 
-.grid.cards > :is(ul, ol) > li:hover,
-.grid.cards > li:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-  border-color: var(--md-accent-fg-color) !important;
+/* В темной теме подложка текста тоже темная */
+[data-md-color-scheme="slate"] .md-content__inner {
+    background-color: rgba(30, 34, 42, 0.6);
 }
